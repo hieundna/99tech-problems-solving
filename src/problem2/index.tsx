@@ -133,7 +133,8 @@ const FormFancy = () => {
   const onSwapToken = () => {
     setFromCurrency(toCurrency);
     setToCurrency(fromCurrency);
-    setAmount(estPrice);
+    setAmount("");
+    setEstPrice("");
     debounceLoading();
   };
 
