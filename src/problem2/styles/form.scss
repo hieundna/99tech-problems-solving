@@ -1,0 +1,297 @@
+.form-wrapper {
+  max-width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background-color: #0f152b;
+  color: white;
+  padding: 1rem;
+  font-family: Roboto, Helvetica, Arial, sans-serif;
+
+  .form-container {
+    width: 100%;
+    max-width: 452px;
+    padding: 0.5rem 1rem;
+
+    .form-widget {
+      max-width: 100%;
+      padding: 12px;
+      border-radius: 10px;
+      background-color: #272c40;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+
+      .form-row {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        min-height: 24px;
+        margin-bottom: 12px;
+
+        &:nth-last-child(1) {
+          margin-bottom: 0;
+        }
+
+        .currency-wrapper {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          width: 180px;
+          border: 1px solid rgba(0, 255, 197, 0.85);
+          border-radius: 18px;
+          cursor: pointer;
+
+          .form-select {
+            width: 100%;
+            transition: 0.3s;
+
+            .single-select {
+              padding: 12px;
+              background-color: transparent;
+              border: none;
+              display: flex;
+              flex-direction: row;
+              justify-content: flex-start;
+              cursor: pointer;
+              outline: none !important;
+              box-shadow: none !important;
+
+              .css-1dimb5e-singleValue {
+                color: white;
+              }
+
+              img {
+                margin-right: 12px;
+              }
+            }
+
+            .currency-list {
+              background-color: #1a1b1f;
+              scrollbar-color: #5c5e65 #1a1b1f;
+              scrollbar-width: thin;
+              width: 200px;
+            }
+
+            .currency-select-item {
+              display: flex;
+              align-items: center;
+              padding: 4px 8px;
+              transition: 0.3s;
+
+              &:hover {
+                background-color: #323338;
+              }
+
+              img {
+                margin-right: 12px;
+              }
+            }
+          }
+
+          .currency-img {
+            margin-right: 12px;
+          }
+        }
+
+        .form-currency-amount {
+          input {
+            border: none;
+            background-color: transparent;
+            text-align: right;
+            padding-right: 12px;
+            color: white;
+            font-size: 16px;
+
+            &:focus,
+            &:focus-visible {
+              border: none;
+              outline: none;
+            }
+          }
+
+          button {
+            color: #00ffd1;
+            font-weight: 600;
+            width: 40px;
+            line-height: 47px;
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            font-size: 12px;
+          }
+        }
+      }
+    }
+
+    .swap-icon {
+      display: flex;
+      width: 100%;
+      justify-content: center;
+      height: 80px;
+      align-items: center;
+
+      img {
+        cursor: pointer;
+      }
+    }
+
+    .note {
+      font-size: 12px;
+      color: #ffffff80;
+      font-weight: 100;
+    }
+
+    .center {
+      text-align: center;
+    }
+  }
+}
+
+.form-submit {
+  button {
+    width: 100%;
+    border: none;
+    background-color: #00ffd1;
+    color: #050109;
+    font-size: 18px;
+    font-weight: 500;
+    border-radius: 40px;
+    cursor: pointer;
+    height: 40px;
+    transition: 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:disabled {
+      // opacity: 0.5;
+      background-color: #272c40;
+      color: rgba(255, 255, 255, 0.5019607843);
+      cursor: unset;
+    }
+
+    .loading-icon {
+      margin-left: 18px;
+      border-top: 3px solid #f3f3f3; /* Blue */
+      border-radius: 50%;
+      width: 18px;
+      height: 18px;
+      animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+  }
+}
+
+.swap-fee,
+.fee-confirmation {
+  margin: 24px 0;
+  font-size: 12px;
+
+  .loading {
+    animation-name: fading;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+  }
+  @keyframes fading {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.5;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  .form-flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 8px 0;
+
+    .fee-green {
+      color: rgb(0, 255, 209);
+    }
+  }
+}
+
+.fee-confirmation {
+  font-size: 14px;
+}
+
+.form-modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  right: auto;
+  bottom: auto;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  width: 420px;
+  box-shadow:
+    0 3px 6px -4px #0000007a,
+    0 6px 16px #00000052,
+    0 9px 28px 8px #0003;
+  background: rgba(15, 21, 43, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: rgba(0, 255, 209, 0.2) 0px 0px 30px 0px;
+  border-radius: 10px;
+  backdrop-filter: blur(4px);
+  padding: 24px;
+  padding-top: 40px;
+  font-size: 14px;
+  line-height: 1.5715;
+  word-wrap: break-word;
+  color: #ffffffd9;
+  font-family: Roboto, Helvetica, Arial, sans-serif;
+
+  .close-modal {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 10;
+    padding: 0;
+    color: #ffffff73;
+    font-weight: 700;
+    line-height: 1;
+    text-decoration: none;
+    background: transparent;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+    transition: color 0.3s;
+    width: 54px;
+    height: 54px;
+    font-size: 16px;
+  }
+}
+
+.form-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.75);
+}
+
+.tracsaction-status {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .form-submit {
+    margin-top: 24px;
+    width: 100%;
+  }
+}

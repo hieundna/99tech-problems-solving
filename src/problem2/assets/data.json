@@ -1,0 +1,68 @@
+[
+  { "currency": "BLUR", "balance": 0 },
+  {
+    "currency": "bNEO",
+    "balance": 7
+  },
+  { "currency": "BUSD", "balance": 99 },
+  { "currency": "BUSD", "balance": 441 },
+  { "currency": "USD", "balance": 1 },
+  {
+    "currency": "ETH",
+    "balance": 1645
+  },
+  { "currency": "GMX", "balance": 36 },
+  { "currency": "STEVMOS", "balance": 17 },
+  { "currency": "LUNA", "balance": 846 },
+  { "currency": "RATOM", "balance": 10 },
+  { "currency": "STRD", "balance": 0 },
+  { "currency": "EVMOS", "balance": 0 },
+  { "currency": "IBCX", "balance": 41 },
+  { "currency": "IRIS", "balance": 0 },
+  { "currency": "ampLUNA", "balance": 0 },
+  { "currency": "KUJI", "balance": 675 },
+  {
+    "currency": "STOSMO",
+    "balance": 431
+  },
+  { "currency": "USDC", "balance": 0 },
+  { "currency": "axlUSDC", "balance": 9 },
+  {
+    "currency": "ATOM",
+    "balance": 7
+  },
+  {
+    "currency": "STATOM",
+    "balance": 8
+  },
+  {
+    "currency": "OSMO",
+    "balance": 0
+  },
+  { "currency": "rSWTH", "balance": 0 },
+  { "currency": "STLUNA", "balance": 0.44232210169491526 },
+  {
+    "currency": "LSI",
+    "balance": 67.69661525423729
+  },
+  { "currency": "OKB", "balance": 42 },
+  { "currency": "OKT", "balance": 13 },
+  {
+    "currency": "SWTH",
+    "balance": 3
+  },
+  { "currency": "USC", "balance": 994 },
+  { "currency": "USDC", "balance": 1 },
+  { "currency": "USDC", "balance": 1 },
+  { "currency": "USDC", "balance": 0 },
+  {
+    "currency": "WBTC",
+    "balance": 26002
+  },
+  { "currency": "wstETH", "balance": 1872 },
+  { "currency": "YieldUSD", "balance": 1 },
+  {
+    "currency": "ZIL",
+    "balance": 0
+  }
+]
