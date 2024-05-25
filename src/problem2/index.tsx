@@ -14,6 +14,7 @@ import { getNumberOfDecimal } from "./components/utils";
 import data from "./assets/data.json";
 import FormModal from "./components/Modal";
 import FeeConfirmation from "./components/FeeConfirmation";
+import Button from "./components/Button";
 
 const CURRENCY_BASE_URL = "https://interview.switcheo.com/prices.json";
 const ADDRESS = "0xdZ2Ac92F948cBE464d19Jn49085f2691cD3Dd92A";
@@ -199,19 +200,15 @@ const FormFancy = () => {
           loading={loadingFee}
           currency={fromCurrency.currency}
         />
-        <div className="form-submit">
-          <button
-            type="button"
-            disabled={
-              !amount ||
-              parseFloat(amount) === 0 ||
-              (getBalance(fromCurrency) || 0) < parseFloat(amount)
-            }
-            onClick={onOpenConfirmation}
-          >
-            Send
-          </button>
-        </div>
+        <Button
+          disabled={
+            !amount ||
+            parseFloat(amount) === 0 ||
+            (getBalance(fromCurrency) || 0) < parseFloat(amount)
+          }
+          label="Send"
+          onClickHandler={onOpenConfirmation}
+        />
       </div>
       <FormModal
         modalIsOpen={modalIsOpen}
@@ -226,13 +223,12 @@ const FormFancy = () => {
             currency={fromCurrency.currency}
             receiveAddress={ADDRESS}
           />
-
-          <div className="form-submit">
-            <button type="button" disabled={submitting} onClick={onSubmit}>
-              Confirm
-              {submitting && <div className="loading-icon"></div>}
-            </button>
-          </div>
+          <Button
+            disabled={submitting}
+            label="Confirm"
+            loading={submitting}
+            onClickHandler={onSubmit}
+          />
         </>
       </FormModal>
       <FormModal
@@ -248,11 +244,7 @@ const FormFancy = () => {
             wallet{" "}
           </p>
 
-          <div className="form-submit">
-            <button type="button" onClick={onCloseTransactionModal}>
-              Close
-            </button>
-          </div>
+          <Button label="Close" onClickHandler={onCloseTransactionModal} />
         </div>
       </FormModal>
     </div>

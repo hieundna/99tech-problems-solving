@@ -42,3 +42,10 @@ export interface IModal {
   children: React.ReactElement;
   className?: string;
 }
+
+export interface IButton {
+  onClickHandler: () => void;
+  disabled?: boolean;
+  label: string;
+  loading?: boolean;
+}
